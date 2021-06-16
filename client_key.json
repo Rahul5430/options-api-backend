@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "isb-shareable",
+  "private_key_id": "0454d51697fa205aaa36d9fcc19c1e3e920cadaf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCHnaRVD98Z63FL\nwlZDZj8adG5ihZXHJwbuvvFvVDVV3bVbZXCOKuZ1+WQqkExeQZZa2jGep+U5fQcE\neEZ0uDuc90+NjafDaZco8HeCyBw91Bnb+k/q9hcWlzYVpFXagzfP29Ijol93IHx+\npeuKxaUmPHvQSG2aZeS7+U/0wPaEen24T/7Amt9kXYbeictIggXG3wg80Uj2YvPx\nGrX0KoQ0f2v1TDun/KgLuGLbZw/c5zToOCbXyrlyNS+AnZHT+yLGRQMtab28zBwu\nKdEZ/FwcZAfBXn7RFYPUmPQdIeztzxRylkwfStySRCGgh5EohPebKDx4RCGxRDmV\nP78sYUx5AgMBAAECggEACRonjB4DQgtvZepRPTeA8hbxIbkIPdRSFCF0tZ2CnD9u\ni10vmhspr1lhw7Q+VpqIVj4MKTM+S1wnkGvnhAX+2kuEZ2J5PsBjiOKQOD2Tclg+\nCWmvhib7kw9AbgttnRDu5LXtphP2hwRYgWzuy42gcVngkDDhn69JvuQTiGs7IIEP\nKWQ2ghh78mqlxi9dplSwlZNNdZb5Dyb7quGcJDF6B4/OkGGSdOj17a1kdsCPTnip\nb3IllczdKL5Qa1bK75I59bktlFa5mq1ik/EJnQ0/KcGSR+DQgaLa1ODPJQ/NuYqG\nKKxzF3QyU/OetTKjP/Vf9dzwbl76wX5AsoS7XHQJ0QKBgQC6XzS2OSUB6/qFGSYw\nAjyIH+B2CN8MMqkfH/MGXmepYeIQ7hvM2JHKz06v9FkmHf6ul4SJ3epljofF/x2v\nNvyMSdRoal2/bspcgAcTWl6sfB2BKEMDRigpN02MJSbg3iJaYv631IdLtQxIpQcO\nLLb2grjod7dnPn4MUuZvyDPu3wKBgQC6SBI1xV2c5N/uPsP+lJaRTu0DIrGtAS6b\n+8Khgx7p0QiNOU92bPpV07GCPUkAYi3ThS7bwcjgLENr5I/kud8SLqhwYcwX/G5k\nbIJUopUjOrue9R16UEyeX8d8bHDV+U/Hw9vNfQMX9LHpYskyNPWBzKVIA7AgJ0n3\n03Q0jPOnpwKBgGSZ36o9TmyrJJ+T47kme+Y+zrroLv42mnPimxxk+S/FVnItFXSN\nsqT3IlJ4Y2bf6gn0X+bLkysetMt72loqJEjV0YJLaC9dbn5f3XHk5hXVKVf+k63A\nwQz+fS2ZIFNhlMmVhklUv3NuVyMfcZ+FI34NMiLJ/IYOhZvBZAIS33WhAoGALPSH\nsIJY/Swe/pgXJLEnRRoPCNqullnarbosVl4Wb8cKkUprauER6PSVuiCgJX+MH6fc\njxxNJgyImNkoAML6mqC39ackYgWBfqrRKSuzYjUiYlI1Mvd+BhqHQffJo1nvbv5N\nZWHuBTIAXZqBg6RUO2bv3FlHf/r7VtupB6Wch7ECgYEAgNWMjxriKFEXQ8yETO12\nCPDMWrEfAWiCbOddFpB+WsstTrQgvOXc54y7vfFZj40/ge1hf+bXojPFBcionrvv\naDSiDYQ0ER1bOjZ+8Pv4X+TXyWyeKxqvMRGa0ZuWywDjng2RyiAX//r+pmZukyQM\nOMcxjYVWqi/EI8Eg+owsbfg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "isb-shareable@isb-shareable.iam.gserviceaccount.com",
+  "client_id": "102201934508083141109",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/isb-shareable%40isb-shareable.iam.gserviceaccount.com"
+}
