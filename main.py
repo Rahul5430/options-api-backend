@@ -30,7 +30,7 @@ def quote():
             return d + datetime.timedelta(days_ahead)
 
         for i in range(0,28,7):
-            x = next_weekday(datetime.date.today(), 3+i)
+            x = next_weekday(datetime.date.today() + datetime.timedelta(i), 3)
             day = x.strftime("%d")
             month = x.strftime("%b")
             year = x.strftime("%Y")
