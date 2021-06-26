@@ -21,7 +21,7 @@ def quote():
         import time
         start_time = time.time()
 
-        # date
+        # options date
         res = []
         def next_weekday(d, weekday):
             days_ahead = weekday - d.weekday()
@@ -57,6 +57,41 @@ def quote():
         print(res)
         yield '%s<br/>\n' % res
 
+        # futures date
+        from datetime import datetime
+
+        res1 = []
+        temp = 0
+        i = 0
+        # for i in range(3):
+        while i < 3:
+            month = calendar.monthcalendar(datetime.today().year, datetime.today().month+temp+i)
+            thrusday = max(month[-1][calendar.THURSDAY], month[-2][calendar.THURSDAY])
+            # print(type(date.today().strftime("%d")))
+            # if thrusday < int(date.today().strftime("%d")):
+            #     temp = 1
+            #     i-=1
+                # continue
+            present = datetime.now()
+            # print(present)
+            day = str(thrusday)
+            # currentmonth = datetime.strptime(str(datetime.today().month+temp+i), "%m").strftime("%b")
+            currentmonth = str(datetime.strptime(str(datetime.today().month+temp+i), "%m").strftime("%m"))
+            year = str(datetime.today().year)
+            # print(datetime(int(year), int(datetime.strptime(str(datetime.today().month+temp+i), "%m").strftime("%m")), int(day)))
+            # print(datetime(int(year), int(datetime.strptime(str(datetime.today().month+temp+i), "%m").strftime("%m")), int(day)) < present)
+            # print(datetime(int(year), int(datetime.strptime(str(datetime.today().month+temp+i), "%m").strftime("%m")), int(day), 23, 59, 0))
+            if datetime(int(year), int(datetime.strptime(str(datetime.today().month+temp+i), "%m").strftime("%m")), int(day), 23, 59, 0) < present:
+                temp = 1
+                i-=1
+            else:
+                # res1.append(day+'-'+currentmonth+'-'+year)
+                res1.append(year+'-'+currentmonth+'-'+day)
+            i+=1
+
+        print(res1)
+        yield '%s<br/>\n' % res1
+
         # API
         import gspread
         from oauth2client.service_account import ServiceAccountCredentials
@@ -89,27 +124,23 @@ def quote():
             print("Updated sheet", i, "BANKNIFTY")
             yield '%s<br/>\n' % ("Updated sheet "+ str(i) + " BANKNIFTY")
 
+        sheet = client.open('ISB shareable-1').worksheet('ISB FUTURES')
+        print("Opened sheet FUTURES")
+        yield '%s<br/>\n' % "Opened sheet FUTURES"
+        sheet.update_cell(1, 1, ('=IMPORTXML("https://www.moneycontrol.com/india/indexfutures/nifty/9/'+res1[0]+'/", "//*[contains(@class, \'r_28\')]")'))
+        sheet.update_cell(2, 1, ('=IMPORTXML("https://www.moneycontrol.com/india/indexfutures/nifty/9/'+res1[1]+'/", "//*[contains(@class, \'r_28\')]")'))
+        sheet.update_cell(3, 1, ('=IMPORTXML("https://www.moneycontrol.com/india/indexfutures/nifty/9/'+res1[2]+'/", "//*[contains(@class, \'r_28\')]")'))
+        sheet.update_cell(1, 2, ('=IMPORTXML("https://www.moneycontrol.com/india/indexfutures/banknifty/23/'+res1[0]+'/", "//*[contains(@class, \'r_28\')]")'))
+        sheet.update_cell(2, 2, ('=IMPORTXML("https://www.moneycontrol.com/india/indexfutures/banknifty/23/'+res1[1]+'/", "//*[contains(@class, \'r_28\')]")'))
+        sheet.update_cell(3, 2, ('=IMPORTXML("https://www.moneycontrol.com/india/indexfutures/banknifty/23/'+res1[2]+'/", "//*[contains(@class, \'r_28\')]")'))
+        print("Updated sheet FUTURES")
+        yield '%s<br/>\n' % "Updated sheet FUTURES"
+
         print("done")
         yield '%s<br/>\n' % "done"
-
+        
         print("--- %s seconds ---" % (time.time() - start_time))
         yield '%s<br/>\n' % (time.time() - start_time)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return Response(inner(), mimetype='text/html')
 
